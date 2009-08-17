@@ -1,0 +1,34 @@
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @user.gender %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%=h @user.birthdate %>
+</p>
+
+<p>
+  <b>Address:</b><br />
+  <% if @user.address %>
+    <%= @user.address.to_s %>
+    <%= link_to 'Edit Address', edit_user_address_path(@user, @address) %> |
+    <%= link_to 'Destroy Address', user_address_path(@user, @address), :confirm => 'Are you sure?', :method => :delete %>
+  <% else %>
+    <%= link_to 'Create Address', new_user_address_path(@user) %>
+  <% end %>
+</p>
+<br />
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

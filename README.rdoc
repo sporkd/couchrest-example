@@ -1,0 +1,9 @@
+== CouchRest Example Rails App
+
+This is an example CouchRest Rails app that demonstrates the use of CouchRest with resourceful routes.
+
+== Requirements
+
+* *sporkd-couchrest*: "http://github.com/sporkd/couchrest":http://github.com/sporkd/couchrest
+
+(gem install sporkd-couchrest)
